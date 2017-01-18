@@ -11,9 +11,13 @@ while True:
   COUNT += 1
   if n == NUM:
     break;
+  if COUNT == 3:
+    print('3回失敗してしまいました。ゲームオーバーです。')
+    exit()
   if n > NUM:
     print('もっと小さな数です')
   else:
     print('もっと大きな数です')
+
 print('あたりです!おめでとうございます!')
 print('{}回目の入力で一致しました。'.format(COUNT))
