@@ -1,9 +1,19 @@
 import random
 
-NUM = random.randint(1, 10)
-COUNT = 0
+lebel = int(input())
 
-print('数を当ててください。(1〜10の中にあります）')
+switch lebel
+  when 0
+    NUM = random.randint(1, 10)
+    MAX_COUNT = 3
+  when 1
+    NUM = random.randint(1, 100)
+    MAX_COUNT = 6
+  when 2
+    NUM = random.randint(1, 1000)
+    MAX_COUNT = 10
+
+COUNT = 0
 
 while True:
   print('入力：', end='')
@@ -11,8 +21,8 @@ while True:
   COUNT += 1
   if n == NUM:
     break;
-  if COUNT == 3:
-    print('3回失敗してしまいました。ゲームオーバーです。')
+  if COUNT == MAX_COUNT:
+    print('{}回失敗してしまいました。ゲームオーバーです。'.format(MAX_COUNT))
     exit()
   if n > NUM:
     print('もっと小さな数です')
