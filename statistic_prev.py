@@ -7,7 +7,6 @@ data_list = data.split()
 for d in data_list:
   data_sum += int(d)
 data_avg = data_sum / len(data_list)
-data_disp = 0
 sum_double_deviation = 0
 
 for d in data_list:
