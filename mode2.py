@@ -8,7 +8,8 @@ def make_score_lists():
 
 def make_rank_dict(score_list):
   rank_dict = defaultdict(int)
-  for score in score_list: rank_dict[round(score/10)] += 1
+  for score in score_list: rank_dict[round(score/100)] += 1
+  print(rank_dict)
   return rank_dict
 
 def calc_mode(score_list):
